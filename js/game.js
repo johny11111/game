@@ -39,7 +39,7 @@ game_scene.create = function () {
     startButton.visible = false;
   }, this);
 
-    // יצירת אובייקט עם מאפייני הכפתורים של הקלדת החצים
+    //יצירת אובייקט של כפתור במקלדת
     this.cursors = this.input.keyboard.createCursorKeys();
 
     // מיקום הפרס בצד התחתון של המסך
@@ -83,8 +83,8 @@ game_scene.update = function (time, delta) {
   
       // בדיקה האם השחקן נגע בפרס
       if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), this.pras.getBounds())) {
-        this.scene.restart();
         alert("נצחתת!");
+        this.scene.restart();
        
       }
     });
